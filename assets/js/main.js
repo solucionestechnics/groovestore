@@ -19,6 +19,18 @@
 
 		};
 
+
+function doGet(e) {
+  return HtmlService.createHtmlOutputFromFile('Index');
+}
+
+function submitForm(formData) {
+  var sheet = SpreadsheetApp.openById('2004299051').getActiveSheet();
+  sheet.appendRow([formData.name, formData.email, formData.message]);
+}
+
+
+
 	// Breakpoints.
 		breakpoints({
 			wide:      [ '1281px',  '1680px' ],
