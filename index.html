@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>Groove Store</title>
+		<title>Groove Store 2</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -33,8 +33,8 @@
 						<nav id="nav">
 							<ul>
 								<li><a href="index.html">Inicio</a></li>
-								<li><a href="#productos1">Productos Apple</a></li>
-								<li><a href="#productos2">Productos Música</a></li>
+								<li><a href="#productos1">Productos</a></li>
+								<li><a href="#productos2">Servicio Técnico</a></li>
 								<li><a href="#contacto">Contacto</a></li>
 							</ul>
 						</nav>
@@ -50,6 +50,7 @@
 						</p>
 					</header>
 				</section>
+
 
 			<!-- Carousel MacBook -->
 				<section class="carousel" id="productos1">
@@ -88,78 +89,12 @@
 							<p>128 GB - 87% Bateria <br> Perfecto Estado</p></article>
 
 						<article>
-							<a href="#" class="image featured"><img src="images/macbook3.jpg" alt="" /></a>
-							<header>
-								<h3><a href="#">MacBook Mini M1 2020</a></h3>
-							</header>
-							<p>IntelCore i7 / 512 GB SSD / 32 GB RAM / 2T Gráfica / Puertos USB / Tipo C</p></article>
-
-						<article>
-							<a href="#" class="image featured"><img src="images/macbook3.jpg" alt="" /></a>
-							<header>
-								<h3><a href="#">MacBook Mini M1 2020</a></h3>
-							</header>
-							<p>IntelCore i7 / 512 GB SSD / 32 GB RAM / 2T Gráfica / Puertos USB / Tipo C</p></article>
-
-						<article>
-							<a href="#" class="image featured"><img src="images/macbook3.jpg" alt="" /></a>
-							<header>
-								<h3><a href="#">MacBook Mini M1 2020</a></h3>
-							</header>
-							<p>IntelCore i7 / 512 GB SSD / 32 GB RAM / 2T Gráfica / Puertos USB / Tipo C</p></article>
-
-						<article>
-							<a href="#" class="image featured"><img src="images/macbook3.jpg" alt="" /></a>
-							<header>
-								<h3><a href="#">MacBook Mini M1 2020</a></h3>
-							</header>
-							<p>IntelCore i7 / 512 GB SSD / 32 GB RAM / 2T Gráfica / Puertos USB / Tipo C</p></article>
-
-					</div>
-				</section>
-
-				<!-- Carousel Music -->
-				<section class="carousel" id="productos2">
-
-					<center><h3>Todos los productos para Dj productores etc...</h3></center><br>
-					<div class="reel">
-
-						<article>
 							<a href="#" class="image featured"><img src="images/dj1.jpg" alt="" /></a>
 							<header>
-								<h3><a href="#">Traktor F1 / Z1</a></h3>
+								<h3><a href="#">Traktor F1 / Traktor z1</a></h3>
 							</header>
-							<p>Native Instruments </p>
-						</article>
+							<p>Native Instruments</p></article>
 
-							<article>
-							<a href="#" class="image featured"><img src="images/dj1.jpg" alt="" /></a>
-							<header>
-								<h3><a href="#">Traktor F1 / Z1</a></h3>
-							</header>
-							<p>Native Instruments </p>
-						</article>
-							<article>
-							<a href="#" class="image featured"><img src="images/dj1.jpg" alt="" /></a>
-							<header>
-								<h3><a href="#">Traktor F1 / Z1</a></h3>
-							</header>
-							<p>Native Instruments </p>
-						</article>
-							<article>
-							<a href="#" class="image featured"><img src="images/dj1.jpg" alt="" /></a>
-							<header>
-								<h3><a href="#">Traktor F1 / Z1</a></h3>
-							</header>
-							<p>Native Instruments </p>
-						</article>
-							<article>
-							<a href="#" class="image featured"><img src="images/dj1.jpg" alt="" /></a>
-							<header>
-								<h3><a href="#">Traktor F1 / Z1</a></h3>
-							</header>
-							<p>Native Instruments </p>
-						</article>
 
 					</div>
 				</section>
@@ -207,7 +142,6 @@
 
 					<center><h3>SERVICIO TÉCNICO GARANTIZADO</h3></center><br>
 					<div class="reel">
-
 						<article>
 							<a  class="image featured"><img src="images/repair2.jpg" alt="" /></a>
 								<header>
@@ -239,7 +173,7 @@
 							<p style="color: #1c0920;">Ventiladores, Pasta térmica</p>
 						</article>
 						<article>
-							<a class="image featured"><img src="images/repair2.jpg" alt="" /></a>
+							<a class="image featured"><img src="images/repair.jpg" alt="" /></a>
 							<header>
 							    <h3><a href="#" style="color: #1c0920;">Limpieza & Optimización</a></h3>
 							</header>
@@ -252,7 +186,36 @@
 						<hr />
 						<div class="row" id="contacto">
 							<div class="col-12">
+			    <h1>Formulario de Contacto</h1>
+				    <form id="contactForm">
+				        <label for="name">Nombre:</label>
+				        <input type="text" id="name" name="name" required><br><br>
 
+				        <label for="phone">Teléfono:</label>
+				        <input type="tel" id="phone" name="phone" required><br><br>
+
+				        <label for="email">Email:</label>
+				        <input type="email" id="email" name="email" required><br><br>
+
+				        <button type="submit">Enviar</button>
+				    </form>
+
+				    <script>
+				        document.getElementById('contactForm').addEventListener('submit', function(event) {
+				            event.preventDefault(); // Evita el envío normal del formulario
+
+				            const formData = {
+				                name: document.getElementById('name').value,
+				                phone: document.getElementById('phone').value,
+				                email: document.getElementById('email').value
+				            };
+
+				            // Llama a la función de Google Apps Script
+				            google.script.run.withSuccessHandler(function(response) {
+				                alert('Datos enviados correctamente: ' + response);
+				            }).submitForm(formData);
+				        });
+				    </script>
 								<!-- Contact -->
 									<section class="contact">
 										<header>
